@@ -3,6 +3,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,17 +13,20 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(230, 100, 46, 249),
+          backgroundColor: Colors.deepPurple,
           title: Text("Catalog App"),
         ),
         body: Center(
-            child: Container(
-                child: Text(
-          "Welcome Message by Keshav",
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
+          child: Container(
+            child: Text(
+              "Welcome Message by Keshav",
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
-        ))));
+        ),
+        drawer: MyDrawer());
   }
 }
